@@ -1,0 +1,19 @@
+spring:
+  jpa:
+    # mysql 方言
+    database-platform: org.hibernate.dialect.MySQL8Dialect
+    hibernate:
+      ddl-auto: validate
+    show-sql: true
+  # 数据库相关配置
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://192.168.0.114:3306/supernovae_game?useUnicode=true&characterEncoding=UTF-8&serverTimezone=UTC&useSSL=false
+    username: root
+    password: 1
+    hikari.minimum-idle: 5
+    hikari.maximum-pool-size: 15
+    hikari.idle-timeout: 30000
+    hikari.max-lifetime: 1800000
+    hikari.connection-timeout: 30000
+    hikari.connection-test-query: SELECT 1
